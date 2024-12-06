@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Jorge Henrique Machado</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about-me">Sobre Mim</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Alterar tema">🌗</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about-me">
+            <h2>Sobre Mim</h2>
+            <div class="about-content">
+                <div class="circle">
+                    <img src="FotoLinkedin.jpg" alt="Foto de Jorge Henrique Machado" />
+                </div>
+                <p>
+                    Olá, sou Jorge Henrique Machado! Estou em transição de carreira para me tornar um Desenvolvedor
+                    Front-End. Tenho paixão por criar interfaces modernas e acessíveis. Sempre busco aprender novas
+                    tecnologias para evoluir na área.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Minhas Habilidades</h2>
+            <div class="skills-badges">
+                <span class="badge html">HTML</span>
+                <span class="badge css">CSS</span>
+                <span class="badge javascript">JavaScript</span>
+                <span class="badge python">Python</span>
+                <span class="badge nextjs">Next.js</span>
+                <span class="badge nodejs">Node.js</span>
+                <span class="badge git">Git</span>
+                <span class="badge github">GitHub</span>
+            </div>
+        </section>
+
+        <section id="projects" data-aos="fade-left">
+            <h2>Projetos</h2>
+            <div class="project">
+                <p>📌 Meu Portfólio no GitHub:</p>
+                <a href="https://github.com/MachadoJorgeH" target="_blank">Clique aqui</a>
+            </div>
+            <div class="project">
+                <p>🌐 Projetos ao vivo no GitHub Pages:</p>
+                <a href="https://machadojorgeh.github.io" target="_blank">Acesse aqui</a>
+            </div>
+        </section>
+
+        <section id="contact" data-aos="fade-up">
+            <h2>Contato</h2>
+            <form id="contact-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="form-response" class="hidden"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Jorge Henrique Machado. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
