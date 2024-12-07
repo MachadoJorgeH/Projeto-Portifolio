@@ -2,9 +2,11 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 70px;
 }
 
 :root {
+    /* Cores e Estilos Gerais */
     --bg-color: #fff7f0;
     --text-color: #333;
     --accent-color: #ff6f00;
@@ -15,7 +17,6 @@ html {
     --gradient-text: linear-gradient(45deg, #ff6f00, #ffa040);
     --box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
-
 [data-theme="dark"] {
     --bg-color: #121212;
     --text-color: #fff7f0;
@@ -46,11 +47,12 @@ body {
 
 header {
     background: var(--gradient-bg);
-    padding: 10px 20px;
+    padding: 5px 10px;
     box-shadow: var(--box-shadow);
     position: sticky;
     top: 0;
     z-index: 1000;
+    
 }
 
 header nav ul {
@@ -64,7 +66,7 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    padding: 5px 10px;
+    padding: 1px 1px;
     transition: all 0.3s ease;
 }
 
@@ -112,6 +114,8 @@ p {
     font-size: 1.1rem;
     margin: 10px 0;
 }
+
+
 
 section {
     margin-bottom: 50px;
@@ -306,8 +310,8 @@ footer {
     border-radius: 20px;
     font-size: 1rem;
     font-weight: 600;
-    color: white;
-    background-color: var(--accent-color);
+    color: #fff;
+    background: var(--gradient-bg);
     transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -315,7 +319,7 @@ footer {
 
 .badge:hover {
     transform: scale(1.1);
-    background-color: var(--hover-accent);
+    background: var(--accent-color-light);
 }
 
 .badge.html {
@@ -327,8 +331,7 @@ footer {
 }
 
 .badge.javascript {
-    background-color: #f7df1e;
-    color: #000;
+    background-color: #c5b11a;
 }
 
 .badge.python {
@@ -402,4 +405,39 @@ footer {
     .skills-badges {
         gap: 10px;
     }
+}
+
+#resume {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--secondary-bg);
+    box-shadow: var(--box-shadow);
+    margin-top: 30px;
+}
+
+#resume h2 {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+#resume p {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.resume-button {
+    display: inline-block;
+    background: var(--gradient-bg);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.resume-button:hover {
+    background: var(--accent-color-light);
+    transform: scale(1.05);
 }
