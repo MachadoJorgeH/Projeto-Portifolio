@@ -459,3 +459,87 @@ footer {
     background: var(--accent-color-light);
   }
   
+  .carousel {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .carousel-track-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 500px; /* Ajuste o tamanho máximo */
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 100%; 
+    object-fit: fill; 
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .project-text {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--accent-color);
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+  }
+  
+  .carousel-button.prev {
+    left: 10px;
+  }
+  
+  .carousel-button.next {
+    right: 10px;
+  }
+  
+  .carousel-button:hover {
+    background: var(--accent-color-light);
+  }
+
+  .github-icon {
+    width: 400px; /* Define a largura para 400px */
+    height: 400px; /* Define a altura para 400px */
+    object-fit: contain; /* Faz com que o ícone se ajuste proporcionalmente */
+  }
+  

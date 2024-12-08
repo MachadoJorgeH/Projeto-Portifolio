@@ -175,3 +175,37 @@ const content = {
     });
   });
   
+  document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector(".carousel-track");
+    const slides = Array.from(track.children);
+    const prevButton = document.querySelector(".carousel-button.prev");
+    const nextButton = document.querySelector(".carousel-button.next");
+  
+    let currentIndex = 0;
+  
+    const updateCarousel = (index) => {
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${index * slideWidth}px)`;
+    };
+  
+    const showHideButtons = (index) => {
+      prevButton.style.display = index === 0 ? "none" : "block";
+      nextButton.style.display = index === slides.length - 1 ? "none" : "block";
+    };
+  
+    prevButton.addEventListener("click", () => {
+      currentIndex = Math.max(0, currentIndex - 1);
+      updateCarousel(currentIndex);
+      showHideButtons(currentIndex);
+    });
+  
+    nextButton.addEventListener("click", () => {
+      currentIndex = Math.min(slides.length - 1, currentIndex + 1);
+      updateCarousel(currentIndex);
+      showHideButtons(currentIndex);
+    });
+  
+    // Ajusta os botões na inicialização
+    showHideButtons(currentIndex);
+  });
+  
