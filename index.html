@@ -4,129 +4,409 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Jorge Henrique Machado</title>
+    <meta name="description" content="Portfólio de Jorge Henrique Machado - Desenvolvedor Front-End especializado em criar interfaces modernas e acessíveis">
+    <meta name="keywords" content="desenvolvedor, front-end, web, portfolio, HTML, CSS, JavaScript, Dart, Flutter">
+    <meta name="author" content="Jorge Henrique Machado">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jorge Henrique Machado - Desenvolvedor Front-End">
+    <meta property="og:description" content="Portfólio profissional com projetos e habilidades">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <title>Jorge Henrique Machado | Desenvolvedor Front-End</title>
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js" defer></script>
 </head>
 
 <body>
+    <!-- Botão Scroll to Top -->
+    <button id="scroll-top" class="scroll-top-btn" aria-label="Voltar ao topo">
+        ↑
+    </button>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about-me" data-key="about">Sobre Mim</a></li>
-                <li><a href="#skills" data-key="skills">Habilidades</a></li>
-                <li><a href="#projects" data-key="projects">Projetos</a></li>
-                <li><a href="#resume" data-key="resume">Currículo</a></li>
-                <li><a href="#contact" data-key="contact">Contato</a></li>
-            </ul>
-            <button id="theme-toggle" aria-label="Alterar tema">🌗</button>
-            <button id="language-toggle">EN</button>
+    <!-- Header com navegação melhorada -->
+    <header role="banner">
+        <nav role="navigation" aria-label="Navegação principal">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-text">JHM</span>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="#about-me" data-key="about">Sobre Mim</a></li>
+                    <li><a href="#skills" data-key="skills">Habilidades</a></li>
+                    <li><a href="#projects" data-key="projects">Projetos</a></li>
+                    <li><a href="#resume" data-key="resume">Currículo</a></li>
+                    <li><a href="#contact" data-key="contact">Contato</a></li>
+                </ul>
+                
+                <div class="nav-controls">
+                    <button id="theme-toggle" aria-label="Alterar tema" title="Mudar tema">🌙</button>
+                    <button id="language-toggle" aria-label="Alterar idioma" title="Change language">EN</button>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <section id="about-me">
-            <h2 data-key="about-title">Sobre Mim</h2>
-            <div class="about-content">
-                <div class="circle">
-                    <img src="FotoLinkedin.jpg" alt="Foto de Jorge Henrique Machado" />
+    <main role="main">
+        
+        <!-- Hero Section / About Me -->
+        <section id="about-me" class="hero-section" data-aos="fade-up">
+            <div class="hero-content">
+                <div class="profile-wrapper">
+                    <div class="profile-image-container">
+                        <img src="FotoLinkedin.jpg" alt="Jorge Henrique Machado - Desenvolvedor Front-End" class="profile-image" />
+                        <div class="profile-ring"></div>
+                        <div class="profile-ring-2"></div>
+                    </div>
                 </div>
-                <p data-key="about-content">
-                    Olá, sou Jorge Henrique Machado! Estou em transição de carreira para me tornar um Desenvolvedor
-                    Front-End. Tenho paixão por criar interfaces modernas e acessíveis. Sempre busco aprender novas
-                    tecnologias para evoluir na área.
+                
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">👋 Olá, eu sou</span>
+                        <span class="name">Jorge Henrique Machado</span>
+                    </h1>
+                    <h2 class="hero-subtitle" data-key="about-title">Desenvolvedor Front-End</h2>
+                    <p class="hero-description" data-key="about-content">
+                        Olá, sou Jorge Henrique Machado! Estou em transição de carreira para me tornar um Desenvolvedor
+                        Front-End. Tenho paixão por criar interfaces modernas e acessíveis. Sempre busco aprender novas
+                        tecnologias para evoluir na área.
+                    </p>
+                    
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <a href="https://github.com/MachadoJorgeH" target="_blank" rel="noopener noreferrer" 
+                           aria-label="GitHub" title="Visite meu GitHub" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/seu-perfil" target="_blank" rel="noopener noreferrer" 
+                           aria-label="LinkedIn" title="Conecte-se no LinkedIn" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:seu-email@exemplo.com" aria-label="Email" title="Entre em contato" class="social-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            Ver Projetos
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            Entre em Contato
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Decorative Elements -->
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" data-aos="fade-up">
+            <div class="section-header">
+                <h2 data-key="skills-title">Minhas Habilidades</h2>
+                <p class="section-description" data-key="skills-content">
+                    Aqui estão algumas das tecnologias com as quais trabalho regularmente.
                 </p>
             </div>
-        </section>
-
-        <section id="skills">
-            <h2 data-key="skills-title">Minhas Habilidades</h2>
+            
             <div class="skills-badges">
-                <span class="badge html">HTML</span>
-                <span class="badge css">CSS</span>
-                <span class="badge javascript">JavaScript</span>
-                <span class="badge python">Python</span>
-                <span class="badge nextjs">Next.js</span>
-                <span class="badge nodejs">Node.js</span>
-                <span class="badge git">Git</span>
-                <span class="badge github">GitHub</span>
+                <div class="badge html" data-aos="zoom-in" data-aos-delay="100">
+                    <span class="badge-icon">🌐</span>
+                    <span class="badge-text">HTML5</span>
+                </div>
+                <div class="badge css" data-aos="zoom-in" data-aos-delay="200">
+                    <span class="badge-icon">🎨</span>
+                    <span class="badge-text">CSS3</span>
+                </div>
+                <div class="badge javascript" data-aos="zoom-in" data-aos-delay="300">
+                    <span class="badge-icon">⚡</span>
+                    <span class="badge-text">JavaScript</span>
+                </div>
+                <div class="badge dart" data-aos="zoom-in" data-aos-delay="400">
+                    <span class="badge-icon">🎯</span>
+                    <span class="badge-text">Dart</span>
+                </div>
+                <div class="badge flutter" data-aos="zoom-in" data-aos-delay="500">
+                    <span class="badge-icon">📱</span>
+                    <span class="badge-text">Flutter</span>
+                </div>
+                <div class="badge git" data-aos="zoom-in" data-aos-delay="600">
+                    <span class="badge-icon">🔀</span>
+                    <span class="badge-text">Git</span>
+                </div>
+                <div class="badge github" data-aos="zoom-in" data-aos-delay="700">
+                    <span class="badge-icon">🐙</span>
+                    <span class="badge-text">GitHub</span>
+                </div>
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects" data-aos="fade-left">
-            <h2 data-key="projects-title">Projetos</h2>
-            <div class="carousel">
-              <button class="carousel-button prev">&lt;</button>
-              <div class="carousel-track-container">
-                <ul class="carousel-track">
-                  <li class="carousel-slide">
-                    <div class="project">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Icon" class="project-image">
-                        <p>📌 Meu Portfólio no GitHub:</p>
-                        <a href="https://github.com/MachadoJorgeH" target="_blank">Clique aqui</a>
-                      </div>
-                  </li>
-                  <li class="carousel-slide">
-                    <div class="project">
-                      <img src="./imgs-project/ProjetoPetLife.jpg" alt="PetLife" class="project-image">
-                      <p class="project-text">Projeto PetLife</p>
-                      <a href="https://machadojorgeh.github.io/Projeto-PetLife/" target="_blank" class="project-link">Clique aqui</a>
-                    </div>
-                  </li>
-                  <li class="carousel-slide">
-                    <div class="project">
-                      <img src="./imgs-project/ProjetoStarbucks.jpg" alt="Starbucks" class="project-image">
-                      <p class="project-text">Projeto Starbucks</p>
-                      <a href="https://machadojorgeh.github.io/Projeto-Starbucks/" target="_blank" class="project-link">Clique aqui</a>
-                    </div>
-                  </li>
-                  <li class="carousel-slide">
-                    <div class="project">
-                      <img src="imgs-project/ProjetoPokedev.jpg" alt="Projeto Pokedev" class="project-image">
-                      <p class="project-text">Projeto Pokedev</p>
-                      <a href="https://machadojorgeh.github.io/Projeto-Pokedev/" target="_blank" class="project-link">Clique aqui</a>
-                    </div>
-                  </li>
-                  <!-- Adicione mais slides aqui com imagens "Em Breve" -->
-                </ul>
-              </div>
-              <button class="carousel-button next">&gt;</button>
+            <div class="section-header">
+                <h2 data-key="projects-title">Projetos</h2>
+                <p class="section-description" data-key="projects-content">
+                    Confira alguns dos meus projetos mais recentes abaixo.
+                </p>
             </div>
-          </section>
-          
-          
+            
+            <div class="carousel">
+                <button class="carousel-button prev" aria-label="Projeto anterior">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </button>
+                
+                <div class="carousel-track-container">
+                    <ul class="carousel-track">
+                        <!-- GitHub Profile -->
+                        <li class="carousel-slide">
+                            <article class="project project-featured">
+                                <div class="project-image-wrapper">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" 
+                                         alt="GitHub Profile" class="project-image">
+                                    <div class="project-overlay">
+                                        <span class="project-tag">Perfil</span>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h3 class="project-title">Meu GitHub</h3>
+                                    <p class="project-description">
+                                        Explore todos os meus repositórios e projetos open source
+                                    </p>
+                                    <div class="project-links">
+                                        <a href="https://github.com/MachadoJorgeH" target="_blank" 
+                                           rel="noopener noreferrer" class="project-link">
+                                            Visitar Perfil
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        
+                        <!-- PetLife Project -->
+                        <li class="carousel-slide">
+                            <article class="project">
+                                <div class="project-image-wrapper">
+                                    <img src="./imgs-project/ProjetoPetLife.jpg" alt="Projeto PetLife" class="project-image">
+                                    <div class="project-overlay">
+                                        <span class="project-tag">Landing Page</span>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h3 class="project-title">PetLife</h3>
+                                    <p class="project-description">
+                                        Landing page moderna para clínica veterinária com design responsivo
+                                    </p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">HTML</span>
+                                        <span class="tech-tag">CSS</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://machadojorgeh.github.io/Projeto-PetLife/" target="_blank" 
+                                           rel="noopener noreferrer" class="project-link">
+                                            Ver Projeto
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        
+                        <!-- Starbucks Project -->
+                        <li class="carousel-slide">
+                            <article class="project">
+                                <div class="project-image-wrapper">
+                                    <img src="./imgs-project/ProjetoStarbucks.jpg" alt="Projeto Starbucks" class="project-image">
+                                    <div class="project-overlay">
+                                        <span class="project-tag">Clone</span>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h3 class="project-title">Starbucks Clone</h3>
+                                    <p class="project-description">
+                                        Recriação da interface do Starbucks com animações suaves
+                                    </p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">HTML</span>
+                                        <span class="tech-tag">CSS</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://machadojorgeh.github.io/Projeto-Starbucks/" target="_blank" 
+                                           rel="noopener noreferrer" class="project-link">
+                                            Ver Projeto
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                        
+                        <!-- Pokedev Project -->
+                        <li class="carousel-slide">
+                            <article class="project">
+                                <div class="project-image-wrapper">
+                                    <img src="imgs-project/ProjetoPokedev.jpg" alt="Projeto Pokedev" class="project-image">
+                                    <div class="project-overlay">
+                                        <span class="project-tag">Interativo</span>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h3 class="project-title">Pokedev</h3>
+                                    <p class="project-description">
+                                        Aplicação interativa com tema Pokémon e design moderno
+                                    </p>
+                                    <div class="project-tech">
+                                        <span class="tech-tag">HTML</span>
+                                        <span class="tech-tag">CSS</span>
+                                        <span class="tech-tag">JavaScript</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://machadojorgeh.github.io/Projeto-Pokedev/" target="_blank" 
+                                           rel="noopener noreferrer" class="project-link">
+                                            Ver Projeto
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+                
+                <button class="carousel-button next" aria-label="Próximo projeto">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </section>
 
+        <!-- Resume Section -->
         <section id="resume" data-aos="fade-up">
-            <h2 data-key="resume-title">Baixe Meu Currículo</h2>
-            <p data-key="resume-content">Você pode baixar uma cópia do meu currículo para saber mais sobre minhas
-                experiências e habilidades.</p>
-            <a href="Curriculo.pdf" download class="resume-button" data-key="resume-button">Download do Currículo</a>
+            <div class="resume-container">
+                <div class="resume-icon">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10 9 9 9 8 9"/>
+                    </svg>
+                </div>
+                <h2 data-key="resume-title">Baixe Meu Currículo</h2>
+                <p data-key="resume-content">
+                    Você pode baixar uma cópia do meu currículo para saber mais sobre minhas experiências e habilidades.
+                </p>
+                <a href="Curriculo.pdf" download class="resume-button" data-key="resume-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download do Currículo
+                </a>
+            </div>
         </section>
 
-
+        <!-- Contact Section -->
         <section id="contact" data-aos="fade-up">
-            <h2 data-key="contact-title">Contato</h2>
-            <form id="contact-form">
-                <label for="name" data-key="contact-name">Nome:</label>
-                <input type="text" id="name" required>
-                <label for="email" data-key="contact-email">E-mail:</label>
-                <input type="email" id="email" required>
-                <label for="message" data-key="contact-message">Mensagem:</label>
-                <textarea id="message" rows="4" required></textarea>
-                <button type="submit" data-key="submit-button">Enviar</button>
-            </form>
-            <div id="form-response" class="hidden"></div>
+            <div class="section-header">
+                <h2 data-key="contact-title">Entre em Contato</h2>
+                <p class="section-description" data-key="contact-content">
+                    Se você tiver alguma pergunta ou gostaria de entrar em contato, sinta-se livre para me enviar uma mensagem.
+                </p>
+            </div>
+            
+            <div class="contact-container">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name" data-key="contact-name">Nome:</label>
+                        <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" data-key="contact-email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" data-key="contact-message">Mensagem:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button" data-key="submit-button">
+                        <span class="button-text">Enviar Mensagem</span>
+                        <svg class="button-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>
+                    </button>
+                </form>
+                
+                <div id="form-response" class="form-response hidden"></div>
+            </div>
         </section>
-
 
     </main>
 
-    <footer>
-        <p>© 2024 Jorge Henrique Machado. Todos os direitos reservados.</p>
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <p class="footer-text">
+                © 2024 Jorge Henrique Machado. Todos os direitos reservados.
+            </p>
+            <div class="footer-links">
+                <a href="#about-me">Início</a>
+                <span class="separator">•</span>
+                <a href="#projects">Projetos</a>
+                <span class="separator">•</span>
+                <a href="#contact">Contato</a>
+            </div>
+        </div>
     </footer>
+
 </body>
 
 </html>
